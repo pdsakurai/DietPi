@@ -3,6 +3,9 @@ v9.1
 
 New images:
 
+Removed software:
+- RealVNC | Support for RealVNC for Raspberry Pi has been removed from Raspberry Pi Ltd. end, who are suggesting to use TigerVNC instead, which we support already: https://www.raspberrypi.com/documentation/computers/remote-access.html#vnc. While the APT packages are still present and generally work with X11 (https://help.realvnc.com/hc/en-us/articles/14110635000221-Raspberry-Pi-5-Bookworm-and-RealVNC-Connect), they depend on legacy GPU API libraries, which have been deprecated and are not provided anymore by the new kernel and firmware packages for RPi. Since we need to migrate to the new kernel/firmware stack for Raspberry Pi 5 support, we need to drop support for RealVNC as well. If you have installed it currently, it will continue to work for now, but we suggest to migrate to TigerVNC. See the following instructions about how to uninstall RealVNC manually: https://github.com/MichaIng/DietPi/pull/6881
+
 Enhancements:
 - DietPi-Software | Domoticz: Enabled for x86_64 Bookworm and Trixie systems, since the latest x86_64 builds were compiled against libssl3.
 
